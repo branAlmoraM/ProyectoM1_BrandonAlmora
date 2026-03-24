@@ -77,5 +77,7 @@ boton.addEventListener("click", function () {
     contenedor.appendChild(card);
   }
 
+  //Microfeedback de paleta generada al usuario
+  mostrarToast("¡Paleta Generada Correctamente!");
   console.log("Paleta generada de manera correcta");
 });
