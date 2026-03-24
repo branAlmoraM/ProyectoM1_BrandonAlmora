@@ -19,3 +19,42 @@ function generarHEX() {
     .padStart(6, "0"); // rellena con 0 si no se completan los 6 números del formato hezadecimal
   return "#" + hex; // retorna el color hexadecimal
 }
+
+//Generar paleta de colores en HSL o HEXADECIMAL
+boton.addEventListener("click", function () {
+  //Limpiamos el contenedor antes de generar la paleta de colores
+  contenedor.innerHTML = "";
+
+  const cantidad = cantidadSelecc.value;
+  const formato = formatoSelecc.value;
+
+  for (let i = 0; i < cantidad; i++) {
+    let color;
+
+    //Comprobamos el formato elegido por el usuario
+    if (formato === "HEX") {
+      color = generarHEX();
+    } else {
+      color = generarHSL();
+    }
+
+    //Generar tarjetas
+    const card = document.createElement("div");
+    card.classList.add("tarjeta-color");
+
+    //Generar texto en la tarjeta
+    const texto = document.createElement("span");
+    texto.textContent = color;
+
+    //Pintar el color en la tarjeta
+    card.style.backgroundColor = color;
+
+    //Insertar texto en la tarjeta
+    card.appendChild(texto);
+
+    //Insertar la tarjeta en el contenedor
+    contenedor.appendChild(card);
+  }
+
+  console.log("Paleta generada de manera correcta");
+});
