@@ -108,7 +108,7 @@ button:hover {
 }
 /* Tarjeta donde aparecera cada color generado */
 .tarjeta-color {
-  width: 120px;
+  width: 150px;
   border-radius: 10px;
 
   display: flex;
