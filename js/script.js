@@ -4,6 +4,18 @@ const formatoSelecc = document.getElementById("formato");
 const boton = document.getElementById("generar");
 const contenedor = document.getElementById("paleta");
 
+//Función para uso de toast
+const toast = document.getElementById("toast");
+
+function mostrarToast(mensaje) {
+  toast.textContent = mensaje;
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 1500);
+}
+
 //Creación de funciones para generar colores de manera aleatoria
 function generarHSL() {
   const h = Math.floor(Math.random() * 360); // Hue es un valor de 0 a 360
@@ -51,6 +63,15 @@ boton.addEventListener("click", function () {
 
     //Insertar texto en la tarjeta
     card.appendChild(texto);
+
+    // Evento copiar color al portapapeles
+    card.addEventListener("click", function () {
+      navigator.clipboard.writeText(color);
+
+      mostrarToast(`Copiado: ${color}`);
+
+      console.log("Color copiado:", color);
+    });
 
     //Insertar la tarjeta en el contenedor
     contenedor.appendChild(card);
