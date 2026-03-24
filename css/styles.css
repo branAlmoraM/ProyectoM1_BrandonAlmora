@@ -90,6 +90,7 @@ select {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  transition: all 01s ease;
 }
 
 button:hover {
@@ -115,6 +116,7 @@ button:hover {
 
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: all 01s ease;
 }
 
 .tarjeta-color:hover {
