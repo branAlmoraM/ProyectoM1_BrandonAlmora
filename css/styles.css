@@ -65,6 +65,9 @@ p {
   transform: translateY(0);
 }
 
+.area-colores div ul {
+  list-style: none;
+}
 /* ===================================================== HEADER =============================================== */
 .principal {
   text-align: center;
