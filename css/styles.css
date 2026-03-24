@@ -115,7 +115,6 @@ button:hover {
   align-items: center;
   justify-content: center;
 
-  font-weight: bold;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   transition: all 01s ease;
 }
@@ -126,10 +125,10 @@ button:hover {
 
 /* Texto dentro de la tarjeta */
 .tarjeta-color span {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 5px 8px;
-  border-radius: 5px;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 /* ===================================================== FOOTER =============================================== */
